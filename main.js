@@ -181,7 +181,7 @@ const answerKey = {
 
   34: {
     type: "single",
-    correct: ['assertEquals("Michael Jordan",result);']
+    correct: ["assertEqualsMjSpaced"]
   },
 
   35: {
