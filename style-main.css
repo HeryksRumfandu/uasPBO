@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #ffffff; /* putih */
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.container {
+  max-width: 960px;
+  margin: 24px auto;
+  background: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  color: #0d2458; /* biru tua */
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Question block */
+
+.question {
+  border-top: 1px solid #dde2f5;
+  padding-top: 16px;
+  margin-top: 16px;
+  padding-bottom: 12px;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-number {
+  font-weight: 600;
+  color: #0d2458; /* biru tua */
+  font-size: 0.95rem;
+}
+
+.question-text {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.question-text.small {
+  font-size: 0.9rem;
+}
+
+/* Image */
+
+.question-image-wrapper {
+  margin: 8px 0 10px;
+  border-radius: 10px;
+  border: 1px solid #dde2f5;
+  background: #f4f6ff;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.question-image {
+  max-width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+/* Options */
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.option-btn {
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #204ecf; /* outline biru tua */
+  background: #e7edff;       /* biru sangat muda */
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.2s;
+  color: #0d2458;
+}
+
+.option-btn:hover {
+  background: #d6e0ff;       /* hover biru lebih pekat */
+}
+
+.option-btn.selected {
+  background: #204ecf;       /* biru tua */
+  border-color: #0d2458;
+  color: #ffffff;
+}
+
+/* Input & dropdown */
+
+.dropdown-select {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #204ecf;
+  min-width: 260px;
+  background-color: #ffffff;
+  color: #0d2458;
+}
+
+.text-input {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #204ecf;
+  width: 100%;
+  max-width: 320px;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* Highlight jawaban */
+
+.question.correct {
+  border-left: 4px solid #4caf50;
+  padding-left: 12px;
+}
+
+.question.incorrect {
+  border-left: 4px solid #f44336;
+  padding-left: 12px;
+}
+
+/* Tombol periksa jawaban (dibuat dari JS) */
+
+.check-btn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #204ecf;
+  background: #204ecf;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.95rem;
+}
+
+.check-btn:hover {
+  background: #162f80;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .container {
+    margin: 12px;
+    padding: 16px;
+  }
+
+  .question-image {
+    max-height: 200px;
+  }
+}
